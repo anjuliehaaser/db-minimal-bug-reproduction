@@ -4,15 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "vercel build",
+    "vercel-build": "next build",
     "start": "next start",
+    "deploy:pr": "vercel deploy --prebuilt --yes --regions fra1 --token=$VERCEL_API_TOKEN",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*"
+    "ui": "workspace:*",
+    "vercel": "^31.0.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
