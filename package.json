@@ -15,5 +15,8 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "bug-1"
+  "name": "bug-1",
+  "dependencies": {
+    "vercel": "^31.0.1"
+  }
 }
