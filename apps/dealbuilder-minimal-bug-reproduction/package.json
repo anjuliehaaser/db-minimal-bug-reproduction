@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "vercel build --scope=porschedigital -p=dealbuilder-minimal-bug-reproduction -d",
+    "build": "vercel build",
+    "deploy": "vercel deploy --prebuilt",
     "vercel-build": "next build",
     "start": "next start",
-    "deploy:pr": "cd ../.. && vercel deploy --prebuilt --yes --regions fra1 --token=$VERCEL_API_TOKEN",
     "lint": "next lint"
   },
   "dependencies": {
