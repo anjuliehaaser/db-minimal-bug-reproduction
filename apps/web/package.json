@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:prepare": "vercel pull --yes --scope=$VERCEL_SCOPE --environment=preview --token=$VERCEL_API_TOKEN",
     "build": "vercel build",
     "vercel-build": "next build",
     "start": "next start",
-    "deploy:pr": "vercel deploy --prebuilt --yes --regions fra1 --token=$VERCEL_API_TOKEN",
+    "deploy": "vercel deploy --prebuilt --yes --regions fra1 --token=$VERCEL_API_TOKEN",
     "lint": "next lint"
   },
   "dependencies": {

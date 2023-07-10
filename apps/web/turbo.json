@@ -1,0 +1,16 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build", "build:prepare"],
+      "outputs": [".next/**", "!.next/cache/**", ".vercel/**"]
+    },
+    "build:prepare": {
+      "outputs": [".vercel/project.json"]
+    },
+    "deploy": {
+      "dependsOn": ["build"]
+    }
+  }
+}
